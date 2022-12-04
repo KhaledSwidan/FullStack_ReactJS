@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { React, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from "../../firebase";
@@ -13,14 +13,19 @@ const LogIn = () =>
 
   const navigate = useNavigate();
 
+  const signIn = e =>
+  {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then(auth => { if (auth) navigate("/") })
+      .catch(err => alert(err.message));
+  };
+
   const register = e =>
   {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
-      .then(auth =>
-      {
-        if (auth) navigate("/");
-      })
+      .then(auth => { if (auth) navigate("/") })
       .catch(err => alert(err.message));
   };
   
@@ -45,7 +50,7 @@ const LogIn = () =>
               value={password}
               onChange={e => setPassword(e.target.value)}
             />
-            <button className="login-signInBtn" type="submit">
+            <button className="login-signInBtn" type="submit" onClick={signIn}>
               Sign in
             </button>
             <p>

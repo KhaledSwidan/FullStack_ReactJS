@@ -3,11 +3,17 @@ import { Link } from 'react-router-dom';
 import Logo from "../../images/header-logo.png";
 import searchIcon from "../../images/searchIcon.png";
 import shoppingCart from "../../images/shopping-cart.png";
+import { useAuth } from '../../context/GlobalContext';
+
+import { auth } from '../../firebase';
 
 import "./Header.css";
 
 const Header = () =>
 {
+  const { user } = useAuth();
+  const handleSignOut = () => auth.signOut();
+
   return (
     <div className="header">
       <Link to="/">
@@ -18,10 +24,10 @@ const Header = () =>
         <img className="header-searchIcon" src={searchIcon} alt="search-icon" />
       </div>
       <div className="header-nav">
-        <Link to="/login">
-          <div className="header-option">
-            <span className="header-optionLineOne">Hello Guest</span>
-            <span className="header-optionLineTwo">& Sign In</span>
+        <Link to={!user && "/login"}>
+          <div className="header-option" onClick={handleSignOut}>
+            <span className="header-optionLineOne">Hello {user ? `${user.email}` : "Guest"}</span>
+            <span className="header-optionLineTwo">{user ? "Sign Out" : "Sign In"}</span>
           </div>
         </Link>
         <Link to="/orders">
@@ -36,7 +42,7 @@ const Header = () =>
         </div>
         <Link to="/checkout">
           <div className="header-optionBasket">
-            <img src={shoppingCart} alt="shoppingCart"/>
+            <img src={shoppingCart} alt="shoppingCart" />
             <span className="header-optionLineTwo header-basketCount">5</span>
           </div>
         </Link>
