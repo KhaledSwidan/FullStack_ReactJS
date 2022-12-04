@@ -11,7 +11,7 @@ import "./Header.css";
 
 const Header = () =>
 {
-  const { user } = useAuth();
+  const { user, basket } = useAuth();
   const handleSignOut = () => auth.signOut();
 
   return (
@@ -43,7 +43,7 @@ const Header = () =>
         <Link to="/checkout">
           <div className="header-optionBasket">
             <img src={shoppingCart} alt="shoppingCart" />
-            <span className="header-optionLineTwo header-basketCount">5</span>
+            <span className="header-optionLineTwo header-basketCount">{basket ? `${basket.length}` : 0}</span>
           </div>
         </Link>
       </div>

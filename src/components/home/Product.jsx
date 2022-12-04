@@ -3,10 +3,11 @@ import { useAuth } from '../../context/GlobalContext';
 import starIcon from "../../images/star.png";
 import "./home.css";
 
-const Product = ({ title, price, image, rating, id }) => {
+const Product = ({ title, price, image, rating, id }) =>
+{
   const { dispatch } = useAuth();
-  const addToBasket = () => {
-    dispatch({
+  const addToBasket = () => dispatch(
+    {
       type: "ADD_TO_BASKET",
       item: {
         id: id,
@@ -16,7 +17,7 @@ const Product = ({ title, price, image, rating, id }) => {
         rating: rating,
       },
     });
-  };
+  
   return (
     <div className="product">
       <div className="product-info">
@@ -31,7 +32,7 @@ const Product = ({ title, price, image, rating, id }) => {
           .fill()
           .map((_, i) => (
             <p key={i}>
-              <img src={starIcon} alt=""/>
+              <img src={starIcon} alt="" />
             </p>
           ))}
       </div>

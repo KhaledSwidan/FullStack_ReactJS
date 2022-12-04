@@ -18,6 +18,8 @@ firebase.js → → → env.local,
 
 npm i react-router-dom@6.3
 npm install react-bootstrap bootstrap
+npm i shortid
+npm i react-currency-format
 
 Header.jsx structure;
 LogIn.jsx structure;
