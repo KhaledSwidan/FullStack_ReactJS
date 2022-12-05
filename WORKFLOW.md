@@ -20,6 +20,11 @@ npm i react-router-dom@6.3
 npm install react-bootstrap bootstrap
 npm i shortid
 npm i react-currency-format
+npm install --save stripe
+npm install --save @stripe/react-stripe-js @stripe/stripe-js
+npm i express cors stripe
+firebase emulators:start --only functions //to activate firebase function (cloud functions)
+npm i axios
 
 Header.jsx structure;
 LogIn.jsx structure;

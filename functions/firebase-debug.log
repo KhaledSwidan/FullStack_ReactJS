@@ -1,0 +1,247 @@
+[debug] [2022-12-04T23:25:17.039Z] ----------------------------------------------------------------------
+[debug] [2022-12-04T23:25:17.043Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Khaled Swidan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2022-12-04T23:25:17.044Z] CLI Version:   11.16.1
+[debug] [2022-12-04T23:25:17.045Z] Platform:      win32
+[debug] [2022-12-04T23:25:17.045Z] Node Version:  v18.12.1
+[debug] [2022-12-04T23:25:17.047Z] Time:          Mon Dec 05 2022 01:25:17 GMT+0200 (توقيت شرق أوروبا الرسمي)
+[debug] [2022-12-04T23:25:17.047Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-04T23:25:17.276Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-04T23:25:17.277Z] > authorizing via signed-in user (khaledqutb4@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-12-04T23:25:17.303Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-04T23:25:17.305Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project reactjsfullstack-db64e. This may result in unexpected behavior. 
+[debug] [2022-12-04T23:25:17.330Z] [hub] writing locator at C:\Users\KHALED~1\AppData\Local\Temp\hub-reactjsfullstack-db64e.json
+[debug] [2022-12-04T23:25:17.390Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-04T23:25:17.391Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-04T23:25:17.391Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[warn] !  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2022-12-04T23:25:17.481Z] defaultcredentials: writing to file C:\Users\Khaled Swidan\AppData\Roaming\firebase\khaledqutb4_gmail_com_application_default_credentials.json
+[debug] [2022-12-04T23:25:17.518Z] Setting GAC to C:\Users\Khaled Swidan\AppData\Roaming\firebase\khaledqutb4_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Khaled Swidan\\AppData\\Roaming\\firebase\\khaledqutb4_gmail_com_application_default_credentials.json"}}
+[debug] [2022-12-04T23:25:17.522Z] > refreshing access token with scopes: []
+[debug] [2022-12-04T23:25:17.528Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-04T23:25:17.529Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-04T23:25:18.151Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-04T23:25:18.152Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-04T23:25:18.167Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjsfullstack-db64e/adminSdkConfig [none]
+[debug] [2022-12-04T23:25:19.018Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjsfullstack-db64e/adminSdkConfig 200
+[debug] [2022-12-04T23:25:19.019Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjsfullstack-db64e/adminSdkConfig {"projectId":"reactjsfullstack-db64e","storageBucket":"reactjsfullstack-db64e.appspot.com"}
+[debug] [2022-12-04T23:25:19.073Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-12-04T23:25:19.073Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-12-04T23:25:19.073Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Khaled Swidan\\.cache\\firebase\\emulators\\ui-v1.11.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Khaled Swidan\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-12-04T23:25:19.375Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2022-12-04T23:25:19.376Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Front-End\ReactLearn\fullstack-reactjs\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\" for Cloud Functions..."}}
+[debug] [2022-12-04T23:25:19.650Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-12-04T23:25:27.586Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-12-04T23:25:27.586Z] Building nodejs source
+[debug] [2022-12-04T23:25:27.587Z] Analyzing nodejs backend spec
+[debug] [2022-12-04T23:25:27.591Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-04T23:25:29.128Z] Serving at port 9005
+
+[debug] [2022-12-04T23:25:29.638Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-04T23:25:29.658Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/reactjsfullstack-db64e/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/reactjsfullstack-db64e/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-12-04T23:26:09.547Z] File C:\Front-End\ReactLearn\fullstack-reactjs\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\index.js changed, reloading triggers"}}
+[debug] [2022-12-04T23:26:10.558Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-12-04T23:26:18.458Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-12-04T23:26:18.459Z] Building nodejs source
+[debug] [2022-12-04T23:26:18.460Z] Analyzing nodejs backend spec
+[debug] [2022-12-04T23:26:18.462Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-04T23:26:18.497Z] File C:\Front-End\ReactLearn\fullstack-reactjs\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\index.js changed, reloading triggers"}}
+[debug] [2022-12-04T23:26:19.351Z] Serving at port 9005
+
+[debug] [2022-12-04T23:26:19.511Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-12-04T23:26:26.715Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-12-04T23:26:26.715Z] Building nodejs source
+[debug] [2022-12-04T23:26:26.716Z] Analyzing nodejs backend spec
+[debug] [2022-12-04T23:26:26.717Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-04T23:26:26.767Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-04T23:26:26.780Z] File C:\Front-End\ReactLearn\fullstack-reactjs\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\index.js changed, reloading triggers"}}
+[debug] [2022-12-04T23:26:26.793Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2022-12-04T23:26:27.512Z] Serving at port 9006
+
+[debug] [2022-12-04T23:26:27.787Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-12-04T23:26:35.496Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "stripe": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-12-04T23:26:35.497Z] Building nodejs source
+[debug] [2022-12-04T23:26:35.497Z] Analyzing nodejs backend spec
+[debug] [2022-12-04T23:26:35.498Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-04T23:26:35.525Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-04T23:26:35.544Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2022-12-04T23:26:36.089Z] Serving at port 9005
+
+[debug] [2022-12-04T23:26:36.423Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-04T23:26:36.461Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2022-12-05T20:12:13.547Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-05T20:12:13.603Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-05T20:12:13.621Z] Accepted request GET /reactjsfullstack-db64e/us-central1/api --> us-central1-api
+[debug] [2022-12-05T20:12:13.901Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-05T20:12:13.918Z] [functions] Got req.url=/reactjsfullstack-db64e/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/reactjsfullstack-db64e/us-central1/api, mapping to path=/"}}
+[debug] [2022-12-05T20:12:14.369Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-12-05T20:12:14.371Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-12-05T20:12:22.525Z] [runtime-status] [19788] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-05T20:12:22.535Z] [runtime-status] [19788] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-05T20:12:22.538Z] [runtime-status] [19788] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-12-05T20:12:22.540Z] [runtime-status] [19788] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-05T20:12:22.915Z] [runtime-status] [19788] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-12-05T20:12:22.915Z] [runtime-status] [19788] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-12-05T20:12:22.916Z] [runtime-status] [19788] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-05T20:12:22.946Z] [runtime-status] [19788] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-05T20:12:22.946Z] [runtime-status] [19788] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-05T20:12:22.953Z] [runtime-status] [19788] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-12-05T20:12:24.088Z] [runtime-status] [19788] Functions runtime initialized. {"cwd":"C:\\Front-End\\ReactLearn\\fullstack-reactjs\\functions","node_version":"18.12.1"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Functions runtime initialized. {\"cwd\":\"C:\\\\Front-End\\\\ReactLearn\\\\fullstack-reactjs\\\\functions\",\"node_version\":\"18.12.1\"}"}}
+[debug] [2022-12-05T20:12:24.088Z] [runtime-status] [19788] Listening to port: \\?\pipe\fire_emu_09822ebf69adfbde {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [19788] Listening to port: \\\\?\\pipe\\fire_emu_09822ebf69adfbde"}}
+[debug] [2022-12-05T20:12:24.209Z] [worker-us-central1-api-de767fec-43e9-49a7-9175-67d8a2ad3d17]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-de767fec-43e9-49a7-9175-67d8a2ad3d17]: IDLE"}}
+[debug] [2022-12-05T20:12:24.212Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-05T20:12:24.214Z] [worker-us-central1-api-de767fec-43e9-49a7-9175-67d8a2ad3d17]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-de767fec-43e9-49a7-9175-67d8a2ad3d17]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[info] i  functions: Finished "api" in 18.5836ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 18.5836ms"}}
