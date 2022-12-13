@@ -1,30 +1,29 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { doc, setDoc } from 'firebase/firestore';
 import { React, useEffect, useState } from 'react';
 import CurrencyFormat from 'react-currency-format';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { getBasketTotal } from '../../context/AppReducer';
 import { useAuth } from '../../context/GlobalContext';
-import { axios } from "../axios";
+import { db } from '../../firebase';
+import { instance } from "../axios";
 import CheckOutProduct from '../check out/CheckOutProduct';
 import "./payment.css";
 
-const Payment = () =>
-{
-  const { basket, user } = useAuth();
+const Payment = () => {
+  const { basket, user, dispatch } = useAuth();
   const [clientSecret, setClientSecret] = useState();
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const [succeeded, setSucceeded] = useState(false);
-  const [processing, setProcessing] = useState(""); // payment processing;
+  const [processing, setProcessing] = useState("");
+  const stripe = useStripe();
+  const elements = useElements();
+  const navigate = useNavigate();
 
-  const stripe = useStripe(); //for cofirmation step;
-  const elements = useElements(); // = masterCard;
-
-  useEffect(() =>
-  {
-    const getClientSecret = async () =>
-    {
-      const response = await axios({
+  useEffect(() => {
+    const getClientSecret = async () => {
+      const response = await instance({
         method: "post",
         url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
       });
@@ -34,21 +33,40 @@ const Payment = () =>
     getClientSecret();
   }, [basket]);
 
-  const handleSubmit = e =>
-  {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setProcessing(true);
+    const payload = await stripe
+      .confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      })
+      .then(({ paymentIntent }) => {
+        const ref = doc(db, "users", user?.uid, "orders", paymentIntent.id);
+        setDoc(ref, {
+          basket: basket,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created,
+        });
+        setSucceeded(true);
+        setError(null);
+        setProcessing(false);
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
+        navigate("/orders", { replace: true });
+      });
   };
-  const handleChange = e =>
-  {
-    setDisabled(e.empty); //make disable state empty; //start buying;
+  const handleChange = (e) => {
+    setDisabled(e.empty);
     setError(error ? error.message : "");
   };
-
   return (
     <div className="payment">
       <div className="payment-container">
         <h1>
-          Checkout <Link to="/checkout">{basket.length} items</Link>
+          Checkout (<Link to="/checkout">{basket.length} items</Link>)
         </h1>
         {/* Delivery Address */}
         <div className="payment-section">
@@ -63,10 +81,10 @@ const Payment = () =>
         {/* Review Items*/}
         <div className="payment-section">
           <div className="payment-title">
-            <h3>Review items</h3>
+            <h3>Review items and delivery</h3>
           </div>
           <div className="payment-items">
-            {basket.map(item =>
+            {basket.map((item) => (
               <CheckOutProduct
                 key={item.id}
                 id={item.id}
@@ -75,7 +93,7 @@ const Payment = () =>
                 price={item.price}
                 rating={item.rating}
               />
-            )}
+            ))}
           </div>
         </div>
         {/* Payment method*/}
@@ -86,7 +104,7 @@ const Payment = () =>
               <CardElement onChange={handleChange} />
               <div className="payment-priceContainer">
                 <CurrencyFormat
-                  renderText={val => <h3>Order Total : {val}</h3>}
+                  renderText={(value) => <h3>Order Total : {value}</h3>}
                   decimalScale={2}
                   value={getBasketTotal(basket)}
                   displayType={"text"}

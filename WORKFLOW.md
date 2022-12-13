@@ -25,6 +25,7 @@ npm install --save @stripe/react-stripe-js @stripe/stripe-js
 npm i express cors stripe
 firebase emulators:start --only functions //to activate firebase function (cloud functions)
 npm i axios
+npm i moment
 
 Header.jsx structure;
 LogIn.jsx structure;

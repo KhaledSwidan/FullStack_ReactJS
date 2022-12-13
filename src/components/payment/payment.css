@@ -40,3 +40,29 @@
   color: #111;
   cursor: pointer;
 }
+
+/* order; */
+.order {
+  padding: 40px;
+  margin: 20px 0;
+  background-color: white;
+  border: 1px solid lightgray;
+  position: relative;
+}
+.order-id {
+  position: absolute;
+  row-gap: 40px;
+  right: 20px;
+}
+.order-total {
+  font-weight: 500;
+  text-align: right;
+}
+
+/* orders */
+.orders {
+  padding: 20px 80px;
+}
+.orders > h1 {
+  margin: 30px 0;
+}
