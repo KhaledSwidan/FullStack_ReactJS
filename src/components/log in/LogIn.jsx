@@ -1,34 +1,38 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { React, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { React, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 import Logo from "../../images/login-logo.png";
 
 import "./login.css";
 
-const LogIn = () =>
-{
+const LogIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
 
-  const signIn = e =>
-  {
+  const signIn = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
-      .then(auth => { if (auth) navigate("/") })
-      .catch(err => alert(err.message));
+      .then((auth) => {
+        if (auth) navigate("/");
+      })
+      .catch((err) => alert(err.message));
   };
 
-  const register = e =>
-  {
+  const register = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
-      .then(auth => { if (auth) navigate("/") })
-      .catch(err => alert(err.message));
+      .then((auth) => {
+        if (auth) navigate("/");
+      })
+      .catch((err) => alert(err.message));
   };
-  
+
   return (
     <>
       <div className="login">
@@ -42,13 +46,13 @@ const LogIn = () =>
             <input
               type="email"
               value={email}
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <h5>Password</h5>
             <input
               type="password"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <button className="login-signInBtn" type="submit" onClick={signIn}>
               Sign in
@@ -64,7 +68,7 @@ const LogIn = () =>
         </div>
       </div>
     </>
-  )
+  );
 };
 
-export default LogIn
+export default LogIn;

@@ -1,16 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../images/header-logo.png";
 import searchIcon from "../../images/searchIcon.png";
 import shoppingCart from "../../images/shopping-cart.png";
-import { useAuth } from '../../context/GlobalContext';
+import { useAuth } from "../../context/GlobalContext";
 
-import { auth } from '../../firebase';
+import { auth } from "../../firebase";
 
 import "./Header.css";
 
-const Header = () =>
-{
+const Header = () => {
   const { user, basket } = useAuth();
   const handleSignOut = () => auth.signOut();
 
@@ -26,8 +25,12 @@ const Header = () =>
       <div className="header-nav">
         <Link to={!user && "/login"}>
           <div className="header-option" onClick={handleSignOut}>
-            <span className="header-optionLineOne">Hello {user ? `${user.email}` : "Guest"}</span>
-            <span className="header-optionLineTwo">{user ? "Sign Out" : "Sign In"}</span>
+            <span className="header-optionLineOne">
+              Hello {user ? `${user.email}` : "Guest"}
+            </span>
+            <span className="header-optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </div>
         </Link>
         <Link to="/orders">
@@ -43,12 +46,14 @@ const Header = () =>
         <Link to="/checkout">
           <div className="header-optionBasket">
             <img src={shoppingCart} alt="shoppingCart" />
-            <span className="header-optionLineTwo header-basketCount">{basket ? `${basket.length}` : 0}</span>
+            <span className="header-optionLineTwo header-basketCount">
+              {basket ? `${basket.length}` : 0}
+            </span>
           </div>
         </Link>
       </div>
     </div>
-  )
+  );
 };
 
-export default Header
+export default Header;
